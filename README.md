@@ -1,8 +1,8 @@
-# fitbit-server
+# Fitbit-server
 This is the API server for collecting sensor data from smartwatch sensor
 
 ## Requirements
-node v10.21.0
+Node v10.21.0
 
 ## Installation
 ```
@@ -14,10 +14,12 @@ npm install
 npm start
 ```
 
-## Collection Procedure
+## Collection Walkthrough 
 1. First, please make sure the API server, smartphone, smartwatch under the same subnet. 
 2. The API server (at http://172.20.10.6:3000) starts to wait for the recording began.
-3. Once receiving the http posts, the data of sensors would be push to the array *storedData*
-4. The recording stops once the toggle button on smartphone switch to off
-5. No need to touch anything, the recording results would be save to <current time stamp>.json
+3. Once receiving the http posts, the data of sensors would be pushed to the array *storedData*.
+4. The recording stops once the toggle button on smartphone is switched to off. T
+5. he recording results would be saved to <current time stamp>.json
+  
+  
 
