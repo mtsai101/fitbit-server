@@ -1,10 +1,3 @@
-// var express = require('express');
-// var router = express.Router();
-
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
 const fs = require('fs');
 var storedData={};
 storedData.result = []
@@ -17,16 +10,12 @@ module.exports = function(app){
     storedData=[];
     return res.end();
   });
-  app.get('/test',(req,res)=>{
-    console.log("sensor get!");
-    res.send({ 'res': 'sensor post' }); 
-    return res.end();
-  });
+
   app.post('/sensor',(req,res)=>{
     console.log("sensor post!");
     console.log(req.body);
     storedData.result.push(req.body);
-    res.send({ 'res': 'sensor post' }); 
+    res.send({ 'res': 'receive a post from the sensor!' }); 
     return res.end();
   });
 };
